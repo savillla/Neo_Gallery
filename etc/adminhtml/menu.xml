@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Neo_Gallery::neo_gallery" title="Neo Module" module="Neo_Gallery" sortOrder="51" resource="Neo_Gallery::neo_gallery"/>
+        <add id="Neo_Gallery::imagegallery" title="Gallery" module="Neo_Gallery" sortOrder="1" resource="Neo_Gallery::imagegallery" parent="Neo_Gallery::neo_gallery"/>
+        <add id="Neo_Gallery::config" title="Configuration" module="Neo_Gallery" sortOrder="2" resource="Neo_Gallery::config" parent="Neo_Gallery::neo_gallery"/>
+        <add id="Neo_Gallery::add_image" title="Add New Image" module="Neo_Gallery" sortOrder="10" action="neogallery/gallery/new" resource="Neo_Gallery::add_image" parent="Neo_Gallery::imagegallery"/>
+        <add id="Neo_Gallery::manage_image" title="Manage Image" module="Neo_Gallery" sortOrder="20" action="neogallery/gallery/" resource="Neo_Gallery::manage_image" parent="Neo_Gallery::imagegallery"/>
+        <add id="Neo_Gallery::gallery_configuration" title="Setting" module="Neo_Gallery" sortOrder="99" parent="Neo_Gallery::config" action="adminhtml/system_config/edit/section/neo_gallery" resource="Neo_Gallery::gallery_configuration"/>
+    </menu>
+</config>

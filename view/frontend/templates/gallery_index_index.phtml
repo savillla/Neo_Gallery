@@ -1,0 +1,30 @@
+<?php
+$galleries = $block->getImageGallery();
+?>
+<?php if ($galleries->getSize()): ?>
+    <div class="owl-carousel brand-slider">
+        <?php foreach ($galleries as $gallery): ?>
+            <div class="item">
+                <?php if ($gallery->getImageUrl()): ?>
+                    <a class="image-galery gallery-popup" href="<?= $gallery->getImageUrl(); ?>" title="<?= $gallery->getTitle(); ?>">
+                <?php endif; ?>
+                <img src="<?= $gallery->getImageUrl(); ?>" alt="<?= $gallery->getTitle(); ?>" width="100%"/>
+                <?php if ($gallery->getImageUrl()): ?>
+                    </a>
+                <?php endif; ?>
+            </div>
+        <?php endforeach; ?>
+    </div>
+    <script type="text/javascript">
+        require(['jquery', 'owlcarousel','jquery/jquery-ui','Neo_Gallery/js/magnific-popup'], function($) {
+            $('.brand-slider').owlCarousel({
+                autoplay:true,
+                loop:true,
+                nav : false,
+                dots: true,
+                autoplayHoverPause: true,
+                margin:30,
+            });
+        });
+    </script>
+<?php endif; ?>

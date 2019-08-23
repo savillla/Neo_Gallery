@@ -1,0 +1,17 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+	<head>
+		<css src="Neo_Gallery::css/owl.carousel.css"/>
+        <css src="Neo_Gallery::css/owl.theme.default.css"/>
+		<css src="Neo_Gallery::css/magnific-popup.css" />
+    </head> 
+
+    <body>
+        <reference name="head">
+            <action method="setTitle"><title>Neo Gallery</title></action>
+        </reference>
+        <referenceContainer name="content">
+            <block class="Neo\Gallery\Block\Gallery\Index" name="gallery_index_index" template="Neo_Gallery::gallery_index_index.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

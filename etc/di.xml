@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="neogallery_listing_data_source" xsi:type="string">Neo\Gallery\Model\ResourceModel\Gallery\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Neo\Gallery\Model\ResourceModel\Gallery\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">neo_gallery_image</argument>
+            <argument name="eventPrefix" xsi:type="string">neo_gallery_image_collection</argument>
+            <argument name="eventObject" xsi:type="string">gallerycollection</argument>
+            <argument name="resourceModel" xsi:type="string">Neo\Gallery\Model\ResourceModel\Gallery</argument>
+        </arguments>
+    </type>
+</config>
+
