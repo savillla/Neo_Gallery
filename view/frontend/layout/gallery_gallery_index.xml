@@ -4,6 +4,7 @@
 		<css src="Neo_Gallery::css/owl.carousel.css"/>
         <css src="Neo_Gallery::css/owl.theme.default.css"/>
 		<css src="Neo_Gallery::css/magnific-popup.css" />
+        <css src="Neo_Gallery::css/slider.css" />
     </head> 
 
     <body>

@@ -1,0 +1,13 @@
+.owl-carousel .owl-nav .owl-prev,
+.owl-carousel .owl-nav .owl-next{
+    width:30px;
+    height:30px;
+}
+.owl-carousel .owl-nav .owl-prev{
+    background: url(../images/arrow_left.png) !important;
+    background-size: 30px 30px !important;
+}
+.owl-carousel .owl-nav .owl-next{
+    background: url(../images/arrow_right.png) !important;
+    background-size: 30px 30px !important;
+}
