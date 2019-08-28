@@ -1,3 +1,6 @@
+Note: 
+Neo Gallery slider
+Compatible With: Magento 2.3
 I. Admin
     1. Manage Image
         - Display a grid to manage image
