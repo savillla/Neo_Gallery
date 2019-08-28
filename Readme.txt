@@ -13,6 +13,7 @@ I. Admin
         - Max Image Size when upload
 II. Frontend
     Have a slider in frontend. Click thumbnail will show a popup with original image size.
-    url: store_url/gallery/gallery
+    url: store_url/gallery/gallery 
+	add Navigation Menu: Gallery
 	- Responsive slider
 
