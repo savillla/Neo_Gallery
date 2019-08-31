@@ -3,18 +3,24 @@
 namespace Neo\Gallery\Plugin\Block;
 
 use Magento\Framework\Data\Tree\NodeFactory;
-
+use Neo\Gallery\Helper\Data;
 class Topmenu
 {
     /**
      * @var NodeFactory
      */
     protected $nodeFactory;
+    /**
+     * @var Data
+     */
+    protected $helper;
 
     public function __construct(
-        NodeFactory $nodeFactory
+        NodeFactory $nodeFactory,
+        Data $helper
     ) {
         $this->nodeFactory = $nodeFactory;
+        $this->helper = $helper;
     }
 
     public function beforeGetHtml(
@@ -35,12 +41,16 @@ class Topmenu
 
     protected function getNodeAsArray()
     {
-        return [
-            'name' => __('Gallery'),
-            'id' => 'neo-gallery-slider-topmenu',
-            'url' => 'gallery/gallery',
-            'has_active' => false,
-            'is_active' => false // (expression to determine if menu item is selected or not)
-        ];
+        if($this->helper->isEnable() == 0){
+            return [];
+        }else{
+            return [
+                'name' => __('Gallery'),
+                'id' => 'neo-gallery-slider-topmenu',
+                'url' => 'gallery/gallery',
+                'has_active' => false,
+                'is_active' => false // (expression to determine if menu item is selected or not)
+            ];
+        }
     }
 }

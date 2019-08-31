@@ -30,7 +30,7 @@ class Edit extends \Magento\Backend\App\Action
     ) {
         $this->resultPageFactory = $resultPageFactory;
         $this->_coreRegistry = $coreRegistry;
-        parent::__construct($context, $coreRegistry);
+        parent::__construct($context);
     }
 
     /**

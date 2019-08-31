@@ -20,6 +20,11 @@ class NewAction extends \Magento\Backend\App\Action
     protected $resultForwardFactory;
 
     /**
+     * @var _coreRegistry
+     */
+    protected $_coreRegistry;
+
+    /**
      * @param \Magento\Backend\App\Action\Context $context
      * @param \Magento\Framework\Registry $coreRegistry
      * @param \Magento\Backend\Model\View\Result\ForwardFactory $resultForwardFactory
@@ -30,7 +35,8 @@ class NewAction extends \Magento\Backend\App\Action
         \Magento\Backend\Model\View\Result\ForwardFactory $resultForwardFactory
     ) {
         $this->resultForwardFactory = $resultForwardFactory;
-        parent::__construct($context, $coreRegistry);
+        $this->_coreRegistry = $coreRegistry;
+        parent::__construct($context);
     }
 
     /**
