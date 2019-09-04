@@ -8,9 +8,11 @@
     </head> 
 
     <body>
-        <reference name="head">
-            <action method="setTitle"><title>Neo Gallery</title></action>
-        </reference>
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">Neo Gallery 2</argument>
+            </action>
+        </referenceBlock>
         <referenceContainer name="content">
             <block class="Neo\Gallery\Block\Gallery\Index" name="gallery_index_index" template="Neo_Gallery::gallery_index_index.phtml"/>
         </referenceContainer>
