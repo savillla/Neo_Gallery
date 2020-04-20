@@ -1,5 +1,7 @@
 <?php
-
+/**
+ * File created by BacNguyen
+ */
 namespace Neo\Gallery\Controller\Gallery;
 
 use Neo\Gallery\Helper\Data;
