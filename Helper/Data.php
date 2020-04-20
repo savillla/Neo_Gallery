@@ -1,4 +1,7 @@
 <?php
+/**
+ * File created by BacNguyen
+ */
 namespace Neo\Gallery\Helper;
 class Data extends \Magento\Framework\App\Helper\AbstractHelper
 {
